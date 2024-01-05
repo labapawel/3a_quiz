@@ -1,0 +1,11 @@
+[
+        {
+            "pytanie":"Pytanie o płeć", 
+            "opis": "Jaką masz płeć",
+            "odp": [
+                "Kobieta",
+                "Mężczyzna",
+                "inna"
+            ]
+        }
+]
