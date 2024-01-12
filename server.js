@@ -15,7 +15,18 @@ const io = require('socket.io')(server, {
         Credentials: true
     }
 })
+let klienci = [];
 
 io.on("connection", client=>{
-
+    console.log("nawiązano połączenie: ", client.id);
+    client.emit('username');
+    client.on('username', (username, uid)=>{
+        console.log("Klient:", username, uid);
+        let kl = klienci.filter(e=>e.uid==uid)[0];
+        if(!kl)
+        {
+            kl = {'uid': uid, 'username': username, "socket": client}
+            klienci.push(kl);
+        }
+     })
 });
