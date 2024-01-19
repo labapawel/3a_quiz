@@ -3,6 +3,7 @@ const app = express();
 const env = require('dotenv');
 env.config(); // process.env.host
 
+let odp = [];
 app.use(express.static(__dirname+'/public'));
 let server = app.listen(3000, ()=>{
     console.log("http://localhost:3000");    
