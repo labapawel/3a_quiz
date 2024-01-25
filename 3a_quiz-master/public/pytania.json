@@ -1,0 +1,91 @@
+[
+       
+        {
+            "pytanie": "Co to jest programowanie obiektowe?",
+            "opis": "Opisz koncepcję programowania obiektowego.",
+            "odp": [
+              "Paradygmat programowania, który traktuje dane jako obiekty",
+              "Metoda programowania, w której operacje są wykonywane na obiektach",
+              "Sposób projektowania oprogramowania oparty na obiektach",
+              "Koncepcja, w której obiekty komunikują się ze sobą za pomocą wiadomości"
+            ],
+            "poprawna":1
+          },
+          {
+            "pytanie": "Czym różni się RAM od ROM?",
+            "opis": "Objaśnij różnice między pamięcią RAM a pamięcią ROM.",
+            "odp": [
+              "RAM (Random Access Memory) to pamięć odczytywalna i zapisywalna, używana do przechowywania danych tymczasowych",
+              "ROM (Read-Only Memory) to pamięć tylko do odczytu, w której dane są trwale zapisane i nie mogą być modyfikowane",
+              "RAM jest ulotna, co oznacza, że dane są tracone po wyłączeniu zasilania",
+              "ROM jest trwała, dane w niej przechowywane są trwale nawet po wyłączeniu zasilania"
+            ],
+            "poprawna":1
+          },
+          {
+            "pytanie": "Jak działa protokół HTTP?",
+            "opis": "Wyjaśnij zasady działania protokołu HTTP.",
+            "odp": [
+              "HTTP (Hypertext Transfer Protocol) to protokół komunikacyjny używany w World Wide Web",
+              "Działa na zasadzie żądanie-odpowiedź, gdzie przeglądarka wysyła żądanie, a serwer udziela odpowiedzi",
+              "Komunikacja opiera się na tekście i odnośnikach hipertekstowych",
+              "Standardowo używa portu 80, a komunikacja odbywa się w trybie bezstanowym"
+            ],
+            "poprawna":2
+          },
+          {
+            "pytanie": "Co to jest algorytm szyfrowania AES?",
+            "opis": "Opisz algorytm Advanced Encryption Standard (AES).",
+            "odp": [
+              "AES to zaawansowany standard szyfrowania, stosowany do zabezpieczania danych",
+              "Wykorzystuje klucz do szyfrowania i deszyfrowania danych",
+              "Posiada trzy warianty z różnymi długościami klucza: 128-bitowy, 192-bitowy i 256-bitowy",
+              "Jest powszechnie używany w zabezpieczaniu danych w transmisji i przechowywaniu"
+            ],
+            "poprawna":3
+          },
+          {
+            "pytanie": "Co to jest programowanie obiektowe?",
+            "opis": "Opisz koncepcję programowania obiektowego.",
+            "odp": [
+              "Paradygmat programowania, który traktuje dane jako obiekty",
+              "Metoda programowania, w której operacje są wykonywane na obiektach",
+              "Sposób projektowania oprogramowania oparty na obiektach",
+              "Koncepcja, w której obiekty komunikują się ze sobą za pomocą wiadomości"
+            ],
+            "poprawna":0
+          },
+          {
+            "pytanie": "Czym różni się RAM od ROM?",
+            "opis": "Objaśnij różnice między pamięcią RAM a pamięcią ROM.",
+            "odp": [
+              "RAM (Random Access Memory) to pamięć odczytywalna i zapisywalna, używana do przechowywania danych tymczasowych",
+              "ROM (Read-Only Memory) to pamięć tylko do odczytu, w której dane są trwale zapisane i nie mogą być modyfikowane",
+              "RAM jest ulotna, co oznacza, że dane są tracone po wyłączeniu zasilania",
+              "ROM jest trwała, dane w niej przechowywane są trwale nawet po wyłączeniu zasilania"
+            ],
+            "poprawna":1
+          },
+          {
+            "pytanie": "Jak działa protokół HTTP?",
+            "opis": "Wyjaśnij zasady działania protokołu HTTP.",
+            "odp": [
+              "HTTP (Hypertext Transfer Protocol) to protokół komunikacyjny używany w World Wide Web",
+              "Działa na zasadzie żądanie-odpowiedź, gdzie przeglądarka wysyła żądanie, a serwer udziela odpowiedzi",
+              "Komunikacja opiera się na tekście i odnośnikach hipertekstowych",
+              "Standardowo używa portu 80, a komunikacja odbywa się w trybie bezstanowym"
+            ],
+            "poprawna":1
+          },
+          {
+            "pytanie": "Co to jest algorytm szyfrowania AES?",
+            "opis": "Opisz algorytm Advanced Encryption Standard (AES).",
+            "odp": [
+              "AES to zaawansowany standard szyfrowania, stosowany do zabezpieczania danych",
+              "Wykorzystuje klucz do szyfrowania i deszyfrowania danych",
+              "Posiada trzy warianty z różnymi długościami klucza: 128-bitowy, 192-bitowy i 256-bitowy",
+              "Jest powszechnie używany w zabezpieczaniu danych w transmisji i przechowywaniu"
+            ],
+            "poprawna":1
+          }
+]
