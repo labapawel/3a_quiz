@@ -16,17 +16,21 @@ const io = require('socket.io')(server, {
     }
 })
 let klienci = [];
-
-io.on("connection", client=>{
+let username, uid
+io.on("connection", client => {
     console.log("nawiązano połączenie: ", client.id);
     client.emit('username');
-    client.on('username', (username, uid)=>{
-        console.log("Klient:", username, uid);
-        let kl = klienci.filter(e=>e.uid==uid)[0];
-        if(!kl)
-        {
-            kl = {'uid': uid, 'username': username, "socket": client}
+    client.on('username', (_username, _uid) => {
+        console.log("Klient:", _username, _uid);
+        username, uid = _username, _uid
+        let kl = klienci.filter(e => e._uid == _uid)[0];
+        if (!kl) {
+            kl = { 'uid': _uid, 'username': _username, "socket": client }
             klienci.push(kl);
         }
-     })
+    })
+    client.on('disconnect', () => {
+        console.log('Klient opuścił grę');
+        klienci = klienci.filter(klient => klient.socketId !== client.id);
+    });
 });

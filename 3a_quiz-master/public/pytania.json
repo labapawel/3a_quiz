@@ -1,91 +1,192 @@
 [
-       
-        {
-            "pytanie": "Co to jest programowanie obiektowe?",
-            "opis": "Opisz koncepcję programowania obiektowego.",
-            "odp": [
-              "Paradygmat programowania, który traktuje dane jako obiekty",
-              "Metoda programowania, w której operacje są wykonywane na obiektach",
-              "Sposób projektowania oprogramowania oparty na obiektach",
-              "Koncepcja, w której obiekty komunikują się ze sobą za pomocą wiadomości"
-            ],
-            "poprawna":1
-          },
-          {
-            "pytanie": "Czym różni się RAM od ROM?",
-            "opis": "Objaśnij różnice między pamięcią RAM a pamięcią ROM.",
-            "odp": [
-              "RAM (Random Access Memory) to pamięć odczytywalna i zapisywalna, używana do przechowywania danych tymczasowych",
-              "ROM (Read-Only Memory) to pamięć tylko do odczytu, w której dane są trwale zapisane i nie mogą być modyfikowane",
-              "RAM jest ulotna, co oznacza, że dane są tracone po wyłączeniu zasilania",
-              "ROM jest trwała, dane w niej przechowywane są trwale nawet po wyłączeniu zasilania"
-            ],
-            "poprawna":1
-          },
-          {
-            "pytanie": "Jak działa protokół HTTP?",
-            "opis": "Wyjaśnij zasady działania protokołu HTTP.",
-            "odp": [
-              "HTTP (Hypertext Transfer Protocol) to protokół komunikacyjny używany w World Wide Web",
-              "Działa na zasadzie żądanie-odpowiedź, gdzie przeglądarka wysyła żądanie, a serwer udziela odpowiedzi",
-              "Komunikacja opiera się na tekście i odnośnikach hipertekstowych",
-              "Standardowo używa portu 80, a komunikacja odbywa się w trybie bezstanowym"
-            ],
-            "poprawna":2
-          },
-          {
-            "pytanie": "Co to jest algorytm szyfrowania AES?",
-            "opis": "Opisz algorytm Advanced Encryption Standard (AES).",
-            "odp": [
-              "AES to zaawansowany standard szyfrowania, stosowany do zabezpieczania danych",
-              "Wykorzystuje klucz do szyfrowania i deszyfrowania danych",
-              "Posiada trzy warianty z różnymi długościami klucza: 128-bitowy, 192-bitowy i 256-bitowy",
-              "Jest powszechnie używany w zabezpieczaniu danych w transmisji i przechowywaniu"
-            ],
-            "poprawna":3
-          },
-          {
-            "pytanie": "Co to jest programowanie obiektowe?",
-            "opis": "Opisz koncepcję programowania obiektowego.",
-            "odp": [
-              "Paradygmat programowania, który traktuje dane jako obiekty",
-              "Metoda programowania, w której operacje są wykonywane na obiektach",
-              "Sposób projektowania oprogramowania oparty na obiektach",
-              "Koncepcja, w której obiekty komunikują się ze sobą za pomocą wiadomości"
-            ],
-            "poprawna":0
-          },
-          {
-            "pytanie": "Czym różni się RAM od ROM?",
-            "opis": "Objaśnij różnice między pamięcią RAM a pamięcią ROM.",
-            "odp": [
-              "RAM (Random Access Memory) to pamięć odczytywalna i zapisywalna, używana do przechowywania danych tymczasowych",
-              "ROM (Read-Only Memory) to pamięć tylko do odczytu, w której dane są trwale zapisane i nie mogą być modyfikowane",
-              "RAM jest ulotna, co oznacza, że dane są tracone po wyłączeniu zasilania",
-              "ROM jest trwała, dane w niej przechowywane są trwale nawet po wyłączeniu zasilania"
-            ],
-            "poprawna":1
-          },
-          {
-            "pytanie": "Jak działa protokół HTTP?",
-            "opis": "Wyjaśnij zasady działania protokołu HTTP.",
-            "odp": [
-              "HTTP (Hypertext Transfer Protocol) to protokół komunikacyjny używany w World Wide Web",
-              "Działa na zasadzie żądanie-odpowiedź, gdzie przeglądarka wysyła żądanie, a serwer udziela odpowiedzi",
-              "Komunikacja opiera się na tekście i odnośnikach hipertekstowych",
-              "Standardowo używa portu 80, a komunikacja odbywa się w trybie bezstanowym"
-            ],
-            "poprawna":1
-          },
-          {
-            "pytanie": "Co to jest algorytm szyfrowania AES?",
-            "opis": "Opisz algorytm Advanced Encryption Standard (AES).",
-            "odp": [
-              "AES to zaawansowany standard szyfrowania, stosowany do zabezpieczania danych",
-              "Wykorzystuje klucz do szyfrowania i deszyfrowania danych",
-              "Posiada trzy warianty z różnymi długościami klucza: 128-bitowy, 192-bitowy i 256-bitowy",
-              "Jest powszechnie używany w zabezpieczaniu danych w transmisji i przechowywaniu"
-            ],
-            "poprawna":1
-          }
+  {
+      "pytanie": "Co to jest zmienna w programowaniu?",
+      "odp": [
+          "Zmienna to nazwany obszar pamięci, który przechowuje wartość",
+          "Służy do przechowywania danych w programie",
+          "Może zmieniać się w trakcie działania programu",
+          "Umożliwia manipulację danymi przez program"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Jakie są podstawowe typy danych w większości języków programowania?",
+      "odp": [
+          "Integer (liczby całkowite)",
+          "String (łańcuchy znaków)",
+          "Boolean (wartości logiczne)",
+          "Float (liczby zmiennoprzecinkowe)"
+      ],
+      "poprawna": 1
+  },
+  {
+      "pytanie": "Co to jest pętla w programowaniu?",
+      "odp": [
+          "Pętla to konstrukcja umożliwiająca wielokrotne wykonanie określonego fragmentu kodu",
+          "Służy do automatyzacji powtarzalnych zadań",
+          "Może być wykorzystywana do przetwarzania list i kolekcji danych",
+          "Pętle mogą być nieskończone lub wykonywane określoną liczbę razy"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym różni się funkcja od metody?",
+      "odp": [
+          "Funkcja to blok kodu, który może być wywoływany wielokrotnie w programie",
+          "Metoda to funkcja zdefiniowana wewnątrz klasy obiektowej",
+          "Funkcje mogą być zdefiniowane na poziomie globalnym lub lokalnym",
+          "Metody operują na obiektach i są wywoływane poprzez konkretny obiekt"
+      ],
+      "poprawna": 1
+  },
+  {
+      "pytanie": "Co to jest instrukcja warunkowa?",
+      "odp": [
+          "Instrukcja warunkowa to konstrukcja umożliwiająca wykonanie różnych działań w zależności od spełnienia określonego warunku",
+          "Umożliwia kontrolę przebiegu programu w zależności od wartości określonych warunków",
+          "Często wykorzystywana do wykonywania alternatywnych działań w zależności od sytuacji",
+          "W językach programowania najczęściej stosowane są instrukcje warunkowe if, else if i else"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym jest tablica w programowaniu?",
+      "odp": [
+          "Tablica to struktura danych umożliwiająca przechowywanie wielu wartości tego samego typu pod jednym identyfikatorem",
+          "Umożliwia łatwy dostęp do poszczególnych elementów za pomocą indeksów",
+          "Może być jedno- lub wielowymiarowa",
+          "Tablice są często wykorzystywane do przechowywania danych o stałej liczbie elementów"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Jakie są główne zalety stosowania funkcji w programowaniu?",
+      "odp": [
+          "Funkcje pozwalają na modularyzację kodu, co ułatwia jego czytelność i utrzymanie",
+          "Umożliwiają wielokrotne wykorzystanie tego samego bloku kodu bez jego powielania",
+          "Pozwalają na przekazywanie argumentów, dzięki czemu funkcje mogą działać na różnych danych",
+          "Zwiększają elastyczność i skalowalność programu"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Co to jest zasięg zmiennych w programowaniu?",
+      "odp": [
+          "Zasięg zmiennych określa obszar kodu, w którym dana zmienna jest dostępna i ma określoną wartość",
+          "Zmienna zadeklarowana wewnątrz funkcji jest widoczna tylko w tej funkcji",
+          "Zmienna globalna jest widoczna dla wszystkich części programu",
+          "Zmienna lokalna przysłania zmienną globalną o tej samej nazwie"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym różni się kompilator od interpretera?",
+      "odp": [
+          "Kompilator przekształca cały kod programu na kod maszynowy przed jego wykonaniem",
+          "Interpreter przetwarza kod programu linia po linii, tłumacząc go na kod maszynowy w trakcie działania programu",
+          "Kompilator generuje plik wykonywalny, który może być uruchomiony bezpośrednio",
+          "Interpreter wymaga obecności programu źródłowego do jego wykonania"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Co to jest rekurencja w programowaniu?",
+      "odp": [
+          "Rekurencja to technika polegająca na wywoływaniu funkcji przez samą siebie",
+          "Umożliwia rozwiązanie problemów, które można podzielić na podproblemy tego samego typu",
+          "Często wykorzystywana w algorytmach dziel i zwyciężaj",
+          "Rekurencja może prowadzić do przepełnienia stosu w przypadku zbyt wielu zagnieżdżeń"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Jakie są podstawowe operatory logiczne w programowaniu?",
+      "odp": [
+          "AND, OR, NOT",
+          "XOR, NOR, NAND",
+          "&&, ||, !",
+          "AND, OR, XOR"
+      ],
+      "poprawna": 2
+  },
+  {
+      "pytanie": "Co to jest błąd składniowy w programowaniu?",
+      "odp": [
+          "Błąd składniowy występuje, gdy zastosowane są niepoprawne konstrukcje językowe, co uniemożliwia kompilację lub interpretację kodu",
+          "Błąd ten jest wykrywany przez kompilator lub interpreter podczas analizy kodu źródłowego",
+          "Najczęstszymi błędami składniowymi są braki w nawiasach, błędne nazwy zmiennych lub funkcji",
+          "Błąd ten może być naprawiony poprzez poprawienie struktury lub składni kodu"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym różnią się języki interpretowane od języków kompilowanych?",
+      "odp": [
+          "Języki interpretowane są przetwarzane linia po linii, podczas gdy języki kompilowane są przekształcane w całości przed wykonaniem",
+          "Języki interpretowane generują kod maszynowy podczas działania programu, natomiast języki kompilowane generują go wcześniej",
+          "Języki interpretowane są wolniejsze od języków kompilowanych",
+          "Języki interpretowane nie wymagają kompilacji przed uruchomieniem programu"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym jest debugger w programowaniu?",
+      "odp": [
+          "Debugger to narzędzie programistyczne umożliwiające analizę i śledzenie działania programu w celu znalezienia błędów",
+          "Umożliwia przeglądanie wartości zmiennych w różnych momentach działania programu",
+          "Często pozwala na zatrzymanie wykonania programu w określonym punkcie w celu dokładniejszej analizy",
+          "Debugger może być wbudowany w środowisko programistyczne lub dostępny jako odrębny program"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Co to jest struktura danych w programowaniu?",
+      "odp": [
+          "Struktura danych to sposób organizacji i przechowywania danych w pamięci komputera",
+          "Może obejmować różne typy danych, takie jak tablice, listy, drzewa, itp.",
+          "Struktury danych umożliwiają efektywne przetwarzanie i manipulację danymi w programie",
+          "Są kluczowym elementem algorytmów i operacji na danych"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Jakie są zalety stosowania komentarzy w kodzie programu?",
+      "odp": [
+          "Komentarze pozwalają na dokumentowanie kodu, co ułatwia jego zrozumienie dla innych programistów",
+          "Mogą służyć do tymczasowego wyłączania fragmentów kodu bez ich usuwania",
+          "Umożliwiają opisanie działania konkretnych fragmentów kodu w sposób zrozumiały dla programisty",
+          "Pomagają w śledzeniu historii zmian w kodzie i diagnozowaniu problemów"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym jest wskaźnik w językach programowania?",
+      "odp": [
+          "Wskaźnik to zmienna, która przechowuje adres pamięci komputera",
+          "Umożliwia bezpośredni dostęp do konkretnych obszarów pamięci",
+          "Wykorzystywany jest często do manipulacji danymi w sposób bardziej efektywny niż tradycyjne operacje na zmiennych",
+          "Poprawne zarządzanie wskaźnikami jest kluczowe dla uniknięcia błędów typu segmentation fault"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Czym różnią się języki niskiego poziomu od języków wysokiego poziomu?",
+      "odp": [
+          "Języki niskiego poziomu są bliższe językowi maszynowemu i dają większą kontrolę nad sprzętem komputerowym",
+          "Języki wysokiego poziomu są bardziej abstrakcyjne i pozwalają na szybsze pisanie kodu",
+          "Języki niskiego poziomu są zazwyczaj szybsze od języków wysokiego poziomu",
+          "Języki wysokiego poziomu są bardziej wydajne pod względem zużycia pamięci"
+      ],
+      "poprawna": 0
+  },
+  {
+      "pytanie": "Co to jest test jednostkowy w programowaniu?",
+      "odp": [
+          "Test jednostkowy to procedura sprawdzania poprawności działania najmniejszych części kodu programu - pojedynczych funkcji lub metod",
+          "Umożliwia automatyzację procesu testowania, co przyspiesza rozwój oprogramowania i zwiększa jego niezawodność",
+          "Testy jednostkowe mogą być wykonywane zarówno przez programistów jak i specjalne narzędzia",
+          "Ich celem jest sprawdzenie, czy dany fragment kodu zachowuje się zgodnie z oczekiwaniami w różnych warunkach"
+      ],
+      "poprawna": 0
+  }
 ]
