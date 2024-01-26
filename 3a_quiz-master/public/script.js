@@ -26,68 +26,105 @@ connect.on('username', ()=>{
   connect.emit('username', username, UID);    
 })
 
+
+let pytania = []
+const $=name=>document.querySelector(name)
+
+
+czyt_pyt = ()=>{
+    fetch("pytania.json")
+    .then(e=>e.json())
+    .then(j=>{
+        pytania = []
+        pytania.push(...j)
+        losuj_pyt()
+        
+    })
+}
+
+losuj_pyt = ()=>{
+    let pytanie = pytania.filter(e=>!e.niewylosowane)[0];
+    if(!pytanie){
+
+        czyt_pyt()
+    }
+    pytanie.wylosowane = true
+    $('.pytanie').innerHTML = pytanie.pytanie
+    for (let i = 0; i < pytanie.odp.length; i++) {
+    $(`.p${i}`).innerHTML = pytanie.odp[i]
+    }
+}
+
+czyt_pyt()
+
+
 let timer;
-let currentQuestionIndex = 0;
-let questions;
+    let currentQuestionIndex = 0;
+    let questions = [];
 
-function startTimer() {
-  timer = setTimeout(nextQuestion, 15000);
-}
+    const findElement = (selector) => document.querySelector(selector);
 
-function resetTimer() {
+    const loadQuestions = () => {
+      fetch("pytania.json")
+        .then((response) => response.json())
+        .then((data) => {
+          questions = data;
+          startTimer();
+          displayQuestion();
+        })
+        .catch((error) => console.error("Error loading questions:", error));
+    };
 
-  clearTimeout(timer);
-}
+    const startTimer = () => {
+      timer = setTimeout(nextQuestion, 15000);
+    };
 
-function loadQuestions() {
-  // Tutaj użyj odpowiednich środków (np. Fetch API) do wczytania pytań z pliku JSON
-  // Poniżej znajdziesz przykładowy obiekt z pytaniami (możesz dostosować go do swoich potrzeb)
-  //questions = [
-    //{ question: "Jaka jest główna stolica Polski?", answer: "Warszawa" },
-    //{ question: "Ile wynosi 2 + 2?", answer: "4" },
-    // Dodaj więcej pytań w formacie { question: "Treść pytania", answer: "Poprawna odpowiedź" }
-  //];
+    const resetTimer = () => {
+      clearTimeout(timer);
+    };
 
-  // Rozpocznij timer po wczytaniu pytań
-  startTimer();
+    const displayQuestion = () => {
+      const questionElement = findElement("#question");
+      const optionsElement = findElement("#options");
 
-  // Wyświetl pierwsze pytanie
-  displayQuestion();
-}
+      const currentQuestion = questions[currentQuestionIndex];
+      questionElement.textContent = currentQuestion.pytanie;
 
-function displayQuestion() {
-  const questionElement = document.getElementById("question");
-  questionElement.textContent = `Pytanie: ${questions[currentQuestionIndex].question}`;
-}
+      optionsElement.innerHTML = "";
+      currentQuestion.odp.forEach((option, index) => {
+        const optionButton = document.createElement("button");
+        optionButton.textContent = option;
+        optionButton.classList.add("option");
+        optionButton.dataset.index = index;
+        optionButton.addEventListener("click", () => selectOption(index));
+        optionsElement.appendChild(optionButton);
+      });
+    };
 
-//function checkAnswer() {
-  // Przykładowa logika:
-//  const userAnswer = document.getElementById("answer").value;
-//  const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
-//if (userAnswer.toLowerCase() === correctAnswer) {
-//    nextQuestion();
-//  } else {
-//    alert("Błędna odpowiedź. Spróbuj ponownie!");
-//  }
-//}
+    const selectOption = (index) => {
+      const selectedOption = parseInt(index);
+      checkAnswer(selectedOption);
+    };
 
-function nextQuestion() {
-  // Przejdź do następnego pytania
-  currentQuestionIndex++;
+    const checkAnswer = (selectedOption) => {
+      const correctOption = questions[currentQuestionIndex].poprawna;
 
-  // Sprawdź czy są jeszcze jakieś pytania
-  if (currentQuestionIndex < questions.length) {
-    // Wyświetl nowe pytanie
-    displayQuestion();
+      if (selectedOption === correctOption) {
+        nextQuestion();
+      } else {
+        alert("Błędna odpowiedź. Spróbuj ponownie!");
+      }
+    };
 
-    // Zresetuj timer dla nowego pytania
-    resetTimer();
-    startTimer();
-  } else {
-    // Wyświetl komunikat o zakończeniu pytań
-    alert("Koniec pytań. Dziękujemy!");
-  }
-}
+    const nextQuestion = () => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+        resetTimer();
+        startTimer();
+      } else {
+        alert("Koniec pytań. Dziękujemy!");
+      }
+    };
 
-// Rozpocznij proces wczytywania pytań
-window.onload = loadQuestions;
+    window.onload = loadQuestions;
