@@ -106,14 +106,15 @@ let timer;
       checkAnswer(selectedOption);
     };
 
-    const checkAnswer = (selectedOption) => {
-      const correctOption = questions[currentQuestionIndex].poprawna;
-
-      if (selectedOption === correctOption) {
-        nextQuestion();
-      } else {
-        alert("Błędna odpowiedź. Spróbuj ponownie!");
-      }
+   const checkAnswer = (selectedOption) => {
+      const currentQuestion = questions[currentQuestionIndex];
+      const correctOption = currentQuestion.poprawna;
+      const isCorrect = (selectedOption === correctOption);
+    
+      currentQuestion.isCorrect = isCorrect;
+    
+      nextQuestion();
+    };
     };
 
     const nextQuestion = () => {
