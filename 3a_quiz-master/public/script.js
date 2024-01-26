@@ -26,61 +26,105 @@ connect.on('username', ()=>{
   connect.emit('username', username, UID);    
 })
 
+
+let pytania = []
+const $=name=>document.querySelector(name)
+
+
+czyt_pyt = ()=>{
+    fetch("pytania.json")
+    .then(e=>e.json())
+    .then(j=>{
+        pytania = []
+        pytania.push(...j)
+        losuj_pyt()
+        
+    })
+}
+
+losuj_pyt = ()=>{
+    let pytanie = pytania.filter(e=>!e.niewylosowane)[0];
+    if(!pytanie){
+
+        czyt_pyt()
+    }
+    pytanie.wylosowane = true
+    $('.pytanie').innerHTML = pytanie.pytanie
+    for (let i = 0; i < pytanie.odp.length; i++) {
+    $(`.p${i}`).innerHTML = pytanie.odp[i]
+    }
+}
+
+czyt_pyt()
+
+
 let timer;
-let currentQuestionIndex = 0;
-let questions;
+    let currentQuestionIndex = 0;
+    let questions = [];
 
-function startTimer() {
-  timer = setTimeout(nextQuestion, 15000);
-}
+    const findElement = (selector) => document.querySelector(selector);
 
-function resetTimer() {
+    const loadQuestions = () => {
+      fetch("pytania.json")
+        .then((response) => response.json())
+        .then((data) => {
+          questions = data;
+          startTimer();
+          displayQuestion();
+        })
+        .catch((error) => console.error("Error loading questions:", error));
+    };
 
-  clearTimeout(timer);
-}
+    const startTimer = () => {
+      timer = setTimeout(nextQuestion, 15000);
+    };
 
-function loadQuestions() {
-  // Tutaj użyj odpowiednich środków (np. Fetch API) do wczytania pytań z pliku JSON
-  
-  startTimer();
+    const resetTimer = () => {
+      clearTimeout(timer);
+    };
 
-  
-  displayQuestion();
-}
+    const displayQuestion = () => {
+      const questionElement = findElement("#question");
+      const optionsElement = findElement("#options");
 
-function displayQuestion() {
-  const questionElement = document.getElementById("question");
-  questionElement.textContent = `Pytanie: ${questions[currentQuestionIndex].question}`;
-}
+      const currentQuestion = questions[currentQuestionIndex];
+      questionElement.textContent = currentQuestion.pytanie;
 
-//function checkAnswer() {
-  // Przykładowa logika:
-//  const userAnswer = document.getElementById("answer").value;
-//  const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
-//if (userAnswer.toLowerCase() === correctAnswer) {
-//    nextQuestion();
-//  } else {
-//    alert("Błędna odpowiedź. Spróbuj ponownie!");
-//  }
-//}
+      optionsElement.innerHTML = "";
+      currentQuestion.odp.forEach((option, index) => {
+        const optionButton = document.createElement("button");
+        optionButton.textContent = option;
+        optionButton.classList.add("option");
+        optionButton.dataset.index = index;
+        optionButton.addEventListener("click", () => selectOption(index));
+        optionsElement.appendChild(optionButton);
+      });
+    };
 
-function nextQuestion() {
-  // Przejdź do następnego pytania
-  currentQuestionIndex++;
+    const selectOption = (index) => {
+      const selectedOption = parseInt(index);
+      checkAnswer(selectedOption);
+    };
 
-  // Sprawdź czy są jeszcze jakieś pytania
-  if (currentQuestionIndex < questions.length) {
-    // Wyświetl nowe pytanie
-    displayQuestion();
+    const checkAnswer = (selectedOption) => {
+      const correctOption = questions[currentQuestionIndex].poprawna;
 
-    // Zresetuj timer dla nowego pytania
-    resetTimer();
-    startTimer();
-  } else {
-    // Wyświetl komunikat o zakończeniu pytań
-    alert("Koniec pytań. Dziękujemy!");
-  }
-}
+      if (selectedOption === correctOption) {
+        nextQuestion();
+      } else {
+        alert("Błędna odpowiedź. Spróbuj ponownie!");
+      }
+    };
 
-// Rozpocznij proces wczytywania pytań
-window.onload = loadQuestions;
+    const nextQuestion = () => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+        resetTimer();
+        startTimer();
+      } else {
+        alert("Koniec pytań. Dziękujemy!");
+      }
+    };
+
+    window.onload = loadQuestions;
