@@ -8,6 +8,8 @@
         body {
             background-color: #494949;
             margin: 0;
+            font-family: 'Josefin Slab', sans-serif;
+            overflow: hidden;
         }
 
         .container {
@@ -24,33 +26,32 @@
 
         .quiz-title {
             color: #ECE8D9;
-            font-size: 1800%;
-            font-family: 'Josefin Slab', sans-serif;
+            font-size: 10vw;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .btn-play {
             background-color: #ECE8D9;
             color: #494949;
-            padding: 12.5px 25px;
-            font-size: 100px;
-            font-family: 'Josefin Slab', sans-serif;
+            padding: 2.5vw 5vw;
+            font-size: 3vw;
             margin-bottom: 10px;
             border-radius: 20px;
-            text-decoration: none; /* Usunięcie domyślnego podkreślenia dla linku */
+            text-decoration: none;
+            display: inline-block;
         }
 
         .record-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
         }
 
         .record {
             color: #ECE8D9;
-            font-size: 100px;
-            font-family: 'Josefin Slab', sans-serif;
-            margin-top: 20px;
+            font-size: 3vw;
         }
     </style>
     <script src="https://cdn.socket.io/4.7.3/socket.io.min.js"></script>
