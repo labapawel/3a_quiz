@@ -106,16 +106,30 @@ let timer;
       checkAnswer(selectedOption);
     };
 
-   const checkAnswer = (selectedOption) => {
+    const checkAnswer = (selectedOption) => {
       const currentQuestion = questions[currentQuestionIndex];
       const correctOption = currentQuestion.poprawna;
       const isCorrect = (selectedOption === correctOption);
     
       currentQuestion.isCorrect = isCorrect;
     
+
+      saveAnswer(currentQuestionIndex, isCorrect);
+    
       nextQuestion();
     };
+    
+
+    const saveAnswer = (questionIndex, isCorrect) => {    
+
+        let answers = JSON.parse(localStorage.getItem('answers')) || [];
+    
+        answers.push({ index: questionIndex, correct: isCorrect });
+    
+        localStorage.setItem('answers', JSON.stringify(answers));
+      
     };
+    
 
     const nextQuestion = () => {
       currentQuestionIndex++;
