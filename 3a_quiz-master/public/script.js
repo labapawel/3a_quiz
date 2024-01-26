@@ -41,17 +41,10 @@ function resetTimer() {
 
 function loadQuestions() {
   // Tutaj użyj odpowiednich środków (np. Fetch API) do wczytania pytań z pliku JSON
-  // Poniżej znajdziesz przykładowy obiekt z pytaniami (możesz dostosować go do swoich potrzeb)
-  //questions = [
-    //{ question: "Jaka jest główna stolica Polski?", answer: "Warszawa" },
-    //{ question: "Ile wynosi 2 + 2?", answer: "4" },
-    // Dodaj więcej pytań w formacie { question: "Treść pytania", answer: "Poprawna odpowiedź" }
-  //];
-
-  // Rozpocznij timer po wczytaniu pytań
+  
   startTimer();
 
-  // Wyświetl pierwsze pytanie
+  
   displayQuestion();
 }
 
