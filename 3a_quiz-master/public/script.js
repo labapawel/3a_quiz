@@ -76,7 +76,7 @@ let timer;
     };
 
     const startTimer = () => {
-      timer = setTimeout(nextQuestion, 15000);
+      timer = setTimeout(nextQuestion, 500);
     };
 
     const resetTimer = () => {

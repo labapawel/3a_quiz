@@ -4,3 +4,51 @@
 .h-50{
     height: 50%;
 }
+body {
+    background-color: #494949;
+    margin: 0;
+    font-family: 'Josefin Slab', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #494949;
+    width: 100%;
+    max-width: 100%;
+    margin: 0%;
+}
+
+.quiz-title {
+    color: #ECE8D9;
+    font-size: 10vw;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-play {
+    background-color: #ECE8D9;
+    color: #494949;
+    padding: 2.5vw 5vw;
+    font-size: 3vw;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.record {
+    color: #ECE8D9;
+    font-size: 3vw;
+}
