@@ -134,15 +134,17 @@ let timer;
   };
     
 
-    const nextQuestion = () => {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-        resetTimer();
-        startTimer();
-      } else {
-        window.location.href = "/ScorePage.html";
-      }
-    };
+  const nextQuestion = () => {
+    resetTimer(); 
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < questions.length) {
+      displayQuestion();
+      startTimer(); 
+    } else {
+      window.location.href = "/ScorePage.html";
+    }
+  };
+  
 
     window.onload = loadQuestions;
