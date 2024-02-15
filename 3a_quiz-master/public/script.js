@@ -130,7 +130,7 @@ let timer;
   
       answers.push({ username: finalUsername, index: questionIndex, correct: isCorrect });
       
-      localStorage.setItem('answers', JSON.stringify(answers));
+      localStorage.setItem('answers', JSON.stringify(answers));  
   };
     
 
