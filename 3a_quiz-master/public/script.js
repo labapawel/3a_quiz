@@ -119,16 +119,19 @@ let timer;
       nextQuestion();
     };
     
-
     const saveAnswer = (questionIndex, isCorrect) => {    
-
-        let answers = JSON.parse(localStorage.getItem('answers')) || [];
-    
-        answers.push({ index: questionIndex, correct: isCorrect });
-    
-        localStorage.setItem('answers', JSON.stringify(answers));
+      let answers = JSON.parse(localStorage.getItem('answers')) || [];
       
-    };
+      const savedUsername = JSON.parse(localStorage.getItem("username"));
+  
+      const socketUsername = username;
+  
+      const finalUsername = savedUsername || socketUsername || "Unknown";
+  
+      answers.push({ username: finalUsername, index: questionIndex, correct: isCorrect });
+      
+      localStorage.setItem('answers', JSON.stringify(answers));
+  };
     
 
     const nextQuestion = () => {
@@ -138,7 +141,7 @@ let timer;
         resetTimer();
         startTimer();
       } else {
-        alert("Koniec pytań. Dziękujemy!");
+        window.location.href = "/ScorePage.html";
       }
     };
 
