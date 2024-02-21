@@ -7,7 +7,9 @@
           "Może zmieniać się w trakcie działania programu",
           "Umożliwia manipulację danymi przez program"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
+
   },
   {
       "pytanie": "Jakie są podstawowe typy danych w większości języków programowania?",
@@ -17,7 +19,8 @@
           "Boolean (wartości logiczne)",
           "Float (liczby zmiennoprzecinkowe)"
       ],
-      "poprawna": 1
+      "poprawna": 1,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest pętla w programowaniu?",
@@ -27,7 +30,8 @@
           "Może być wykorzystywana do przetwarzania list i kolekcji danych",
           "Pętle mogą być nieskończone lub wykonywane określoną liczbę razy"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym różni się funkcja od metody?",
@@ -37,7 +41,8 @@
           "Funkcje mogą być zdefiniowane na poziomie globalnym lub lokalnym",
           "Metody operują na obiektach i są wywoływane poprzez konkretny obiekt"
       ],
-      "poprawna": 1
+      "poprawna": 1,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest instrukcja warunkowa?",
@@ -47,7 +52,8 @@
           "Często wykorzystywana do wykonywania alternatywnych działań w zależności od sytuacji",
           "W językach programowania najczęściej stosowane są instrukcje warunkowe if, else if i else"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym jest tablica w programowaniu?",
@@ -57,7 +63,8 @@
           "Może być jedno- lub wielowymiarowa",
           "Tablice są często wykorzystywane do przechowywania danych o stałej liczbie elementów"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Jakie są główne zalety stosowania funkcji w programowaniu?",
@@ -67,7 +74,8 @@
           "Pozwalają na przekazywanie argumentów, dzięki czemu funkcje mogą działać na różnych danych",
           "Zwiększają elastyczność i skalowalność programu"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest zasięg zmiennych w programowaniu?",
@@ -77,7 +85,8 @@
           "Zmienna globalna jest widoczna dla wszystkich części programu",
           "Zmienna lokalna przysłania zmienną globalną o tej samej nazwie"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym różni się kompilator od interpretera?",
@@ -87,7 +96,8 @@
           "Kompilator generuje plik wykonywalny, który może być uruchomiony bezpośrednio",
           "Interpreter wymaga obecności programu źródłowego do jego wykonania"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest rekurencja w programowaniu?",
@@ -97,7 +107,8 @@
           "Często wykorzystywana w algorytmach dziel i zwyciężaj",
           "Rekurencja może prowadzić do przepełnienia stosu w przypadku zbyt wielu zagnieżdżeń"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Jakie są podstawowe operatory logiczne w programowaniu?",
@@ -107,7 +118,8 @@
           "&&, ||, !",
           "AND, OR, XOR"
       ],
-      "poprawna": 2
+      "poprawna": 2,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest błąd składniowy w programowaniu?",
@@ -117,7 +129,8 @@
           "Najczęstszymi błędami składniowymi są braki w nawiasach, błędne nazwy zmiennych lub funkcji",
           "Błąd ten może być naprawiony poprzez poprawienie struktury lub składni kodu"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym różnią się języki interpretowane od języków kompilowanych?",
@@ -127,7 +140,8 @@
           "Języki interpretowane są wolniejsze od języków kompilowanych",
           "Języki interpretowane nie wymagają kompilacji przed uruchomieniem programu"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym jest debugger w programowaniu?",
@@ -137,7 +151,8 @@
           "Często pozwala na zatrzymanie wykonania programu w określonym punkcie w celu dokładniejszej analizy",
           "Debugger może być wbudowany w środowisko programistyczne lub dostępny jako odrębny program"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest struktura danych w programowaniu?",
@@ -147,7 +162,8 @@
           "Struktury danych umożliwiają efektywne przetwarzanie i manipulację danymi w programie",
           "Są kluczowym elementem algorytmów i operacji na danych"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Jakie są zalety stosowania komentarzy w kodzie programu?",
@@ -157,7 +173,8 @@
           "Umożliwiają opisanie działania konkretnych fragmentów kodu w sposób zrozumiały dla programisty",
           "Pomagają w śledzeniu historii zmian w kodzie i diagnozowaniu problemów"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym jest wskaźnik w językach programowania?",
@@ -167,7 +184,8 @@
           "Wykorzystywany jest często do manipulacji danymi w sposób bardziej efektywny niż tradycyjne operacje na zmiennych",
           "Poprawne zarządzanie wskaźnikami jest kluczowe dla uniknięcia błędów typu segmentation fault"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Czym różnią się języki niskiego poziomu od języków wysokiego poziomu?",
@@ -177,7 +195,8 @@
           "Języki niskiego poziomu są zazwyczaj szybsze od języków wysokiego poziomu",
           "Języki wysokiego poziomu są bardziej wydajne pod względem zużycia pamięci"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   },
   {
       "pytanie": "Co to jest test jednostkowy w programowaniu?",
@@ -187,6 +206,7 @@
           "Testy jednostkowe mogą być wykonywane zarówno przez programistów jak i specjalne narzędzia",
           "Ich celem jest sprawdzenie, czy dany fragment kodu zachowuje się zgodnie z oczekiwaniami w różnych warunkach"
       ],
-      "poprawna": 0
+      "poprawna": 0,
+      "wylosowane": false
   }
 ]
