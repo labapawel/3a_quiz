@@ -2,6 +2,8 @@ var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
 
+
+
 new Chart("myChart", {
   type: "pie",
   data: {
@@ -13,19 +15,29 @@ new Chart("myChart", {
       },
     ],
   },
+
   options: {
     title: {
       display: true,
       text: "Wyniki quizu",
+      fontColor: "#ECE8D9",
+    },
+    legend: {
+
+      labels: {
+
+        fontColor:"#ECE8D9", 
+      },
     },
   },
 });
+
 
 let answers = JSON.parse(localStorage.getItem("answers"));
 console.log(answers);
 
 let users = [];
-//do poprawy wynik i sumowanie dla kazdego uzytkownika, a pozniej dodanie do diagramu i wyswietlenie go!
+//// Do poprawy wynik i sumowanie dla kazdego uzytkownika, a pozniej dodanie do diagramu i wyswietlenie go!
 answers.forEach((element) => {
   if (element.username in users) {
     users.push(element.username);
@@ -34,4 +46,6 @@ answers.forEach((element) => {
     console.log("juz jest!  ", users, element.username);
   }
 });
+
+
 console.log(users);
