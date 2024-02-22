@@ -22,11 +22,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #494949;
-    margin: 0;
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .quiz-title {
@@ -36,22 +31,43 @@ body {
     text-align: center;
 }
 
-.btn {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-6 {
     background-color: #ECE8D9 !important;
     color: #494949 !important;
     padding: 2.5vw 5vw;
     font-size: 3vw;
-    margin-bottom: 10px;
     border-radius: 20px;
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    box-sizing: border-box; 
+    margin: 10px;
+    width: 40%;
+}
+
+.btn {
+    background-color: #ECE8D9 !important;
+    color: #494949 !important;
+    padding: 2.5vw 3vw;
+    font-size: 3vw;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box; 
+    margin: 10px;
+    width: 50%; 
 }
 
 .btn-play {
     background-color: #ECE8D9;
     color: #494949;
-    padding: 2.5vw 5vw;
+    padding: 2.5vw 3vw;
     font-size: 3vw;
     margin-bottom: 10px;
     border-radius: 20px;
