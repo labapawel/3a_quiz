@@ -37,31 +37,27 @@ body {
     justify-content: center;
 }
 
-.col-6 {
+.col-4 {
     background-color: #ECE8D9 !important;
     color: #494949 !important;
-    padding: 2.5vw 5vw;
-    font-size: 3vw;
+    margin: 15px;
+    font-size: larger;
+
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
     text-align: center;
-    box-sizing: border-box; 
-    margin: 10px;
-    width: 40%;
+    
+    
+
 }
 
 .btn {
-    background-color: #ECE8D9 !important;
-    color: #494949 !important;
-    padding: 2.5vw 3vw;
-    font-size: 3vw;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     box-sizing: border-box; 
-    margin: 10px;
-    width: 50%; 
+    margin: 15px;
+    width: auto; 
+    height: 15%;
 }
 
 .btn-play {
