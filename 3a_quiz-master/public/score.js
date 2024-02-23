@@ -1,8 +1,33 @@
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
+let answers = JSON.parse(localStorage.getItem("answers"));
+console.log(answers);
 
+let users = [];
+answers.forEach((element) => {
+  let userIndex = users.findIndex((user) => user.username === element.username);
+  if (userIndex === -1) {
+    users.push({
+      username: element.username,
+      score: element.correct === 1 ? 1 : 0,
+    });
+    console.log("Added: ", element.username);
+  } else {
+    users[userIndex].score += element.correct === 1 ? 1 : 0;
+    console.log("Updated: ", element.username, element.correct);
+  }
+});
+var xValues = users.map((user) => user.username);
+var yValues = users.map((user) => user.score);
 
+const randomHexColorCode = () => {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  return "#" + n.slice(0, 6);
+};
+
+let colors = [];
+for (let i = 0; i < users.length + 1; i++) {
+  colors.push(randomHexColorCode());
+}
+var barColors = colors;
 
 new Chart("myChart", {
   type: "pie",
@@ -23,29 +48,9 @@ new Chart("myChart", {
       fontColor: "#ECE8D9",
     },
     legend: {
-
       labels: {
-
-        fontColor:"#ECE8D9", 
+        fontColor: "#ECE8D9",
       },
     },
   },
 });
-
-
-let answers = JSON.parse(localStorage.getItem("answers"));
-console.log(answers);
-
-let users = [];
-//// Do poprawy wynik i sumowanie dla kazdego uzytkownika, a pozniej dodanie do diagramu i wyswietlenie go!
-answers.forEach((element) => {
-  if (element.username in users) {
-    users.push(element.username);
-    console.log("dodalem: ", element.username);
-  } else {
-    console.log("juz jest!  ", users, element.username);
-  }
-});
-
-
-console.log(users);

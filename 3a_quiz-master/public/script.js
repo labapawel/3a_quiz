@@ -2,7 +2,7 @@ let progressBar = document.querySelector(".w3-grey");
 let timeValue = 0;
 let timer = 0;
 let changeQuestion = 0;
-let questionIndex = 0
+let questionIndex = 0;
 
 let UID = window.localStorage.getItem("UID");
 if (!UID) {
@@ -51,7 +51,6 @@ const losuj_pyt = () => {
     $(`.p${i}`).innerHTML = pytanie.odp[i];
     $(`.p${i}`).addEventListener("click", () => {
       answer = i;
-    //   console.log(answer);
     });
   }
 };
@@ -79,7 +78,7 @@ const saveAnswer = (questionIndex, isCorrect) => {
 };
 
 const nextQuestion = () => {
-//   console.log(pytanie);
+  //   console.log(pytanie);
 
   if (answer == pytanie.poprawna) {
     saveAnswer(questionIndex, 1);
@@ -88,8 +87,8 @@ const nextQuestion = () => {
     saveAnswer(questionIndex, 0);
     // console.log("nie masz");
   }
-  answer =  null;
-//   console.log(questionIndex, pytania.length);
+  answer = null;
+  //   console.log(questionIndex, pytania.length);
   if (questionIndex < pytania.length) {
     timeValue = 0;
     questionIndex++;
@@ -99,15 +98,13 @@ const nextQuestion = () => {
   }
 };
 
-
 const startTimer = () => {
   clearInterval(timer);
   clearInterval(changeQuestion);
 
   timer = setInterval(countdown, 1000);
-  changeQuestion = setInterval(nextQuestion, 10000);
+  changeQuestion = setInterval(nextQuestion, 11000);
 };
-
 
 const countdown = () => {
   let percentage = timeValue + "%";
@@ -116,8 +113,6 @@ const countdown = () => {
 };
 
 startTimer();
-
-
 
 window.onload = () => {
   connect.emit("getUsername");
