@@ -51,6 +51,7 @@ const losuj_pyt = () => {
     $(`.p${i}`).innerHTML = pytanie.odp[i];
     $(`.p${i}`).addEventListener("click", () => {
       answer = i;
+      $(`.p${i}`).style.color = "red"
     });
   }
 };
