@@ -51,7 +51,12 @@ const losuj_pyt = () => {
     $(`.p${i}`).innerHTML = pytanie.odp[i];
     $(`.p${i}`).addEventListener("click", () => {
       answer = i;
+      document.querySelectorAll('.btn').forEach(element => {
+        element.style.color = "black";
+      });
+
       $(`.p${i}`).style.color = "red"
+
     });
   }
 };
@@ -89,7 +94,10 @@ const nextQuestion = () => {
     // console.log("nie masz");
   }
   answer = null;
-  //   console.log(questionIndex, pytania.length);
+      document.querySelectorAll('.btn').forEach(element => {
+        element.style.color = "black";
+      });
+        //   console.log(questionIndex, pytania.length);
   if (questionIndex < pytania.length) {
     timeValue = 0;
     questionIndex++;
