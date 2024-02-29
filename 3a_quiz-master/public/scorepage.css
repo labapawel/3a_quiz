@@ -1,0 +1,21 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #494949;
+  font-family: 'Josefin Slab', sans-serif;
+  overflow: hidden;
+}
+
+#chart-container {
+  width: 100%;
+  max-width: 1500px;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
